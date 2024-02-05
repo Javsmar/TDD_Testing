@@ -1,6 +1,11 @@
 const sum = require('./sum');
 
 describe("Función suma", () => {
+
+  it('Función suma 1 y 1 es 2', () => {
+    expect(sum(1, 1)).toBe(2);
+  });
+
   describe("Suma números positivos", () => {
     it('sumar 1 + 2 es igual a 3', () => {
       expect(sum(1, 2)).toBe(3);
