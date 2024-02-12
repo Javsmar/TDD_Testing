@@ -2,11 +2,18 @@ const sum = require('./sum');
 
 describe("Función suma", () => {
 
+  afterAll(() => {
+    console.log("TEST INIT");
+  });
+ beforeAll(() => {
+    console.log("TEST FINAL");
+  });
+
   it('Función suma 1 y 1 es 2', () => {
     expect(sum(1, 1)).toBe(2);
   });
 
-  describe("Suma números positivos", () => {
+  describe.only("Suma números positivos", () => {
     it('sumar 1 + 2 es igual a 3', () => {
       expect(sum(1, 2)).toBe(3);
     });
@@ -19,6 +26,10 @@ describe("Función suma", () => {
     it("sumar 2 y -3 es igual a -1", () => {
       expect(sum(2, -3)).toBe(-1);
     });
+  })
+
+  describe("Operaciones con otros tipos", () => {
+    test.todo("sumar números con letras");
   })
 
 });

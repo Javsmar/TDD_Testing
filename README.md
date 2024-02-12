@@ -10,3 +10,5 @@ Para el seguimiento del curso vamos a utilizar las herramientas que ya conocemos
 
 ## Proyecto
 El proyecto consiste en la creación de diferentes tests sobre una aplicación básica en NodeJS.
+
+npx jest
