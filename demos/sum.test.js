@@ -5,7 +5,7 @@ describe("Función suma", () => {
   afterAll(() => {
     console.log("TEST INIT");
   });
- beforeAll(() => {
+  beforeAll(() => {
     console.log("TEST FINAL");
   });
 
@@ -13,7 +13,7 @@ describe("Función suma", () => {
     expect(sum(1, 1)).toBe(2);
   });
 
-  describe.only("Suma números positivos", () => {
+  describe("Suma números positivos", () => {
     it('sumar 1 + 2 es igual a 3', () => {
       expect(sum(1, 2)).toBe(3);
     });
@@ -26,6 +26,12 @@ describe("Función suma", () => {
     it("sumar 2 y -3 es igual a -1", () => {
       expect(sum(2, -3)).toBe(-1);
     });
+  })
+
+  describe("Suma de números decimales", () => {
+    it("Should return 0.3 when add 0.1 and 0.2", () => {
+      expect(sum(0.1, 0.2)).toBeCloseTo(0.3, 9);
+    })
   })
 
   describe("Operaciones con otros tipos", () => {
